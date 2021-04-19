@@ -1,0 +1,1971 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+      <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="/script.js" defer></script>
+<!--   <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+  
+  <meta charset="utf-8" />
+  <title>Digital Health Dashboard</title>
+</head>
+
+<body>
+
+  <div id="app">
+    <!--   nav   -->
+    <nav class="nav">
+      <h1 class="doctor_name"></h1>
+      <h1 class="header_title">Digital Health Dashboard</h1>
+      <div class="nav__links">
+        
+<!--    <a class="link" href="#">About Noom</a>
+        <a class="link" href="#">Engagement</a>
+        <a class="link" href="#">Algorithm</a> -->
+      </div>
+    </nav>
+    <!--   header   -->
+    
+<!--     <header class="header">
+      <div class="header__info">
+        <h1 class="header__title">dDPP Provider Dashboard</h1>
+      </div>
+    </header> -->
+    <main class="main">
+<!--       <h2 class="main_title">Patient dDPP Data</h2> -->
+      
+      
+      <!-- article -->
+<!--       <section class="top_article clearfix">
+      <article class="general_info"> -->
+        <div class="patient_name">
+          <h1 class ="big_name">{patient_name}</h1>
+        </div>
+      
+<div class="line1"></div>
+      
+      
+<!--         Demographic info -->
+      
+<!--         <div class="info">
+          <p id="age">50 yrs</p>
+        </div>
+      
+       <div class="info">
+          <p id="ethnic">{ethnicity}</p>
+        </div>
+      
+      <div class="info">
+          <p id="last_update">Last updated: 09/01/2020</p>
+        </div> -->
+      
+      
+      
+      <table id="patient_info">
+<!--   <tr>
+    <th>John Doe</th>
+
+  </tr> -->
+  <tr>
+    <td>{age}</td>
+    <td>{ethnicity}</td>
+    <td>Last Update: {last_update}</td>
+  </tr>
+</table>
+      
+      
+      
+<!--       <div class="box"></div>
+      
+      
+      <section>
+        
+        <div class="sms_title">
+        <h1>Send Patient an SMS 💬</h1>
+        </div>
+        
+        <div class="typeArea">
+            <input type="text" id="toSend" name="toSend" placeholder="Type a message..."> 
+            
+        </div>
+        
+        <input type="submit" id="submitBtn" value="Send"
+                onclick="submitItem()"> 
+        
+        <!--    list to record messages that were sent    -->
+<!--         <div class="sms_title">
+            <h1>Sent SMS:</h1>
+            <div id="sms-list">
+            </div>
+        </div> -->
+        
+        
+<!--         </section> -->
+      
+      
+      
+      
+      
+      
+      
+      <table id="ddpp_admin_info">
+  <tr>
+    <th>DDPP ENROLLMENT</th>
+    <th>NOOM APP START DATE</th>
+    <th>DEVICES IN USE</th>
+  </tr>
+  <tr>
+    <td>{enroll_date}</td>
+    <td>{noom_start_date}</td>
+    <td>{device}</td>
+  </tr>
+</table>
+      
+      
+      
+      
+      <!--         General ddpp info table -->
+      
+<!--       <table id="customers">
+  <tr>
+    <th><div class="general_title">
+          <h1 id="ddpp_enrolled">DDPP Enrolled</h1>
+        </div></th>
+    <td><div class="info">
+          <p id="noom_start">06/01/2020</p>
+        </div></td>
+  </tr>
+  <tr>
+        <th><div class="general_title">
+          <h1 id="noom_date">Noom Start Date</h1>
+        </div></th>
+    <td><div class="info">
+          <p id="noom_start_date">06/07/2020</p>
+        </div></td>
+  </tr>
+  <tr>
+
+  </tr>
+  <tr>
+      <th><div class="general_title">
+          <h1 id="device">Devices Provided</h1>
+        </div></th>
+    <td><div class="info">
+          <p id="device_name">Inspire 2 Fitbit, A1C, Aria Scale</p>
+        </div></td>
+  </tr>
+  <tr>
+    <th><div class="general_title">
+          <h1 id="coach">Coach Name</h1>
+        </div></th>
+    <td><div class="info">
+          <p id="coach_name">Joan Doe</p>
+        </div></td>
+  </tr>
+          <tr>
+    <th><div class="general_title">
+          <h1 id="week">Current Week</h1>
+        </div></th>
+    <td><div class="info">
+          <p id="week_no">19</p>
+        </div></td>
+  </tr>
+</table> -->
+      
+      
+      
+    <!--         The DDPP General info at top-->
+        
+      
+<!--       <article class="general">
+        <div class="general_title">
+          <h1 id="ddpp_enrolled1">DDPP Enrolled</h1>
+        </div>
+
+        <div class="info">
+          <p id="ddpp_enrolled_date1">DDPP Enrolled Date</p>
+        </div>
+        </article>
+          
+        
+      <article class="general">
+        <div class="general_title">
+          <h1 id="noom_start1">Noom Start Date</h1>
+        </div>
+
+        <div class="info">
+          <p id="noom_start_date1">noom start date</p>
+        </div>
+        </article>
+      
+      
+      
+      <article class="general">
+        <div class="general_title">
+          <h1 id="device1">Devices Provided</h1>
+      
+        </div>
+
+        <div class="info">
+          <p id="device_name1">Fitbit, A1c, scale</p>
+        </div>
+        </article>
+      
+      
+      <article class="general">
+        <div class="general_title">
+          <h1 id="coach1">Coach Name</h1>
+        </div>
+
+        <div class="info">
+          <p id="coach_name1"> Joan Doe </p>
+        </div>
+        </article>
+      
+      
+            
+      <article class="general">
+        <div class="general_title">
+          <h1 id="current_week">Current Week</h1>
+        </div>
+
+        <div class="info">
+          <p id="week_num"> 25 </p>
+        </div>
+        </article> -->
+      
+      
+      
+<!--Overall Engagement Information -->
+      
+      
+<!--       <section class="engagement_overview1">
+        
+        <article class="overview">
+          <div class="overview__content">
+            <header>
+              <h2 class="overview__title">Overall Engagement</h2>
+            </header>
+            <div class="data">
+            <p id="score1">High</p>
+            </div>
+          </div>
+        </article>
+        
+        
+          <article class="overview">
+            <div class="overview__content">
+              <header>
+                <h2 class="overview_title">Engagement Breakdown</h2>
+              </header>
+              <div class="data">
+                <p id="high_num">High</p>
+                <p id="low_num">Low</p>
+              </div>
+            </div>
+          </article>
+        
+        
+        
+           <article class="overview">
+            <div class="overview__content">
+              <header>
+                <h2 class="overview_title">Algorithm in Use</h2>
+              </header>
+              <div class="data">
+                <p id="algorithm_name1">BabyStep</p>
+              </div>
+            </div>
+          </article>
+        
+        
+      </section> -->
+
+      
+<table id="caption">
+  <tr>
+    <td>🟢 High Engagement</td>
+    <td>🔴 Low Engagement</td>
+  </tr>
+</table>
+      
+<table id="engagement_overview">
+  <tr>
+    <th>Current Week</th>
+    <th>Overall Engagement Score</th>
+    <th>Engagement Breakdown</th>
+<!--     <th>Algorithm in Use</th> -->
+  </tr>
+  <tr>
+    <td><div>{week_no}</div></td>
+    <td><div>{score}</div></td>
+    <td><div>{high_percent}</div>
+        <div>{low_percent}</div>
+    </td>
+<!--     <td> <span id="algorithm_name">BABY-STEP</span>
+    <div id="algorithm_def">Calculated by ...</div></td> -->
+  </tr>
+
+</table>
+      
+      
+<!--Noom Data Menu-->
+
+      
+<table id="engagement_data">
+  <tr>
+    <th><header>
+              <h2 class="article__title">Avg Weekly Cal Budget / Intake</h2>
+            </header></th>
+    <th><header>
+                <h2 class="article__title">Avg Weekly Step Count</h2>
+              </header></th>
+    <th><header>
+              <h2 class="article__title">Weekly Exercise Time (min)</h2>
+            </header></th>
+    <th><header>
+              <h2 class="article__title">Noom Weight</h2>
+            </header>
+    <h3>(Log Date)</h3></th>
+    <th><header>
+              <h2 class="article__title">120-day Weight ▲</h2>
+            </header></th>
+    <th><header>
+                <h2 class="article__title">Noom A1c</h2>
+              </header>
+    <h3>(Log Date)</h3></th>
+    <th><header>
+                <h2 class="article__title">BMI (kg/m^2)</h2>
+              </header></th>
+  </tr>
+  <tr>
+    <td>    <div class="data">
+            </div>
+    </td>
+    <td> <div class="data">
+                <p id="step_count">{step_count}</p>
+              </div></td>
+    <td><div class="data">
+              <p id="exercise_time">{exercise_min}</p>
+            </div></td>
+    <td>            <div class="data">
+              <p id="weight">{weight}</p>
+              <p id="weight_date">{weight_date}</p>
+            </div></td>
+    <td>            <div class="data">
+              <p id="weight_change">{weight_change}</p>
+            </div></td>
+      <td>            <div class="data">
+                <p id="a1c">{a1c}</p>
+                <p id="a1c_date">{a1c_date}</p>
+              </div></td>
+      <td>             <div class="data">
+                <p id="bmi">{bmi}</p>
+              </div></td>
+  </tr>
+</table>
+
+      
+      
+<div class="popup" onclick="myFunction()">View Daily Data
+  <span class="popuptext" id="myPopup">
+<table>
+  <tr>
+    <th>Day</th>
+    <th>Budget</th>
+    <th>Intake</th>
+  </tr>
+  <tr>
+    <td>Mon</td>
+    <td>{mon_budget_cal}</td>
+    <td>{mon_intake_cal}</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+    <tr>
+    <td>Tue</td>
+    <td>{tue_budget_cal}</td>
+    <td>{tue_intake_cal}</td>
+  </tr>
+  <tr>
+    <td>Wed</td>
+    <td>{wed_budget_cal}</td>
+    <td>{wed_intake_cal}</td>
+  </tr>
+  <tr>
+    <td>Thu</td>
+    <td>{thu_budget_cal}</td>
+    <td>{thu_intake_cal}</td>
+  </tr>
+  <tr>
+    <td>Fri</td>
+    <td>{fri_budget_cal}</td>
+    <td>{fri_intake_cal}</td>
+  </tr>
+  <tr>
+    <td>Sat</td>
+    <td>{sat_budget_cal}</td>
+    <td>{sat_intake_cal}</td>
+  </tr>
+   <tr>
+    <td>Sun</td>
+    <td>{sun_budget_cal}</td>
+    <td>{sun_intake_cal}</td>
+  </tr>
+</table>
+  </span>
+      </div>
+      <!--  Noom Data Table (Old)  -->
+      
+      
+<!--   <section class="noom_data_menu"> -->
+        <!--    article     -->
+<!--         <article class="article">
+          <div class="article__content">
+            <header>
+              <h2 class="article__title">Avg Weekly Cal Budget / Intake</h2>
+            </header>
+            <div class="data">
+              <p id="budget1">15000</p>
+              <p id="intake1">16000</p>
+            </div>
+          </div>
+        </article> -->
+        
+        
+        
+        <!--    article     -->
+<!--         <article class="article">
+            <div class="article__content">
+              <header>
+                <h2 class="article__title">Weekly Step Count</h2>
+              </header>
+              <div class="data">
+                <p id="step_count1"> 10000</p>
+              </div>
+            </div>
+          </article> -->
+        
+        
+        
+        
+        <!--    article    -->
+<!--         <article class="article">
+          <div class="article__content">
+            <header>
+              <h2 class="article__title">Weekly Exercise Time (min)</h2>
+            </header>
+            <div class="data">
+              <p id="exercise_time1">300</p>
+            </div>
+          </div>
+        </article> -->
+        
+        
+        
+        
+        <!--    article    -->
+<!--         <article class="article">
+          <div class="article__content">
+            <header>
+              <h2 class="article__title">Noom Weight / Log Date</h2>
+            </header>
+            <div class="data">
+              <p id="weight1">200</p>
+              <p id="weight_date1">09/20/2020
+              </p>
+            </div>
+          </div>
+        </article> -->
+        
+        
+        
+        
+        <!--    article    -->
+<!--         <article class="article">
+          <div class="article__content">
+            <header>
+              <h2 class="article__title">30-day Weight Change</h2>
+            </header>
+            <div class="data">
+              <p id="weight_change1">5</p>
+            </div>
+          </div>
+        </article> -->
+        
+        
+        
+        
+        <!--    article    -->
+<!--         <article class="article">
+            <div class="article__content">
+              <header>
+                <h2 class="article__title">Noom A1c</h2>
+              </header>
+              <div class="data">
+                <p id="a1c1">5.8</p>
+                <p id="a1c_date1">09/20/2020</p>
+              </div>
+            </div>
+          </article> -->
+      
+      
+        <!--    article    -->
+<!--         <article class="article">
+            <div class="article__content">
+              <header>
+                <h2 class="article__title">Weight / Height</h2>
+              </header>
+              <div class="data">
+                <p id="bmi1">28</p>
+              </div>
+            </div>
+          </article>
+      
+    </section> -->
+      
+<div class="line2"></div>
+      
+<div class="weekly_data_title">
+<h1>OVERALL ENGAGEMENT</h1>
+</div>     
+      
+      
+<!--  Pass/Fail table   -->
+     
+<table id="overall_engagement">
+  <tr>
+    <th>Week</th>
+    <th>1</th>
+    <th>2</th>
+    <th>3</th>
+    <th>4</th>
+    <th>5</th>
+    <th>6</th>
+    <th>7</th>
+    <th>8</th>
+    <th>9</th>
+    <th>10</th>
+    <th>11</th>
+    <th>12</th>
+    <th>13</th>
+    <th>14</th>
+    <th>15</th>
+    <th>16</th>
+    <th>17</th>
+    <th>18</th>
+    <th>19</th>
+    <th>20</th>
+    <th>21</th>
+    <th>22</th>
+    <th>23</th>
+    <th>24</th>
+    <th>25</th>
+    <th>26</th>
+    <th>27</th>
+    <th>28</th>
+    <th>29</th>
+    <th>30</th>
+    <th>31</th>
+    <th>32</th>
+    <th>33</th>
+    <th>34</th>
+    <th>35</th>
+    <th>36</th>
+    <th>37</th>
+    <th>38</th>
+    <th>39</th>
+    <th>40</th>
+    <th>41</th>
+    <th>42</th>
+    <th>43</th>
+    <th>44</th>
+    <th>45</th>
+    <th>46</th>
+    <th>47</th>
+    <th>48</th>
+    <th>49</th>
+    <th>50</th>
+    <th>51</th>
+    <th>52</th>
+  </tr>
+  <tr>
+    <th>High/Low</th>
+    <th></th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <th></th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <th></th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <th></th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <th></th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <th></th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <th></th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <th></th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <th></th>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td id ="w1">{w1}</td>
+    <td id ="w2">{w2}</td>
+    <td id ="w3">{w3}</td>
+    <td id ="w4">{w4}</td>
+    <td id ="w5">{w5}</td>
+    <td id ="w6">{w6}</td>
+    <td id ="w7">{w7}</td>
+    <td id ="w8">{w8}</td>
+    <td id ="w9">{w9}</td>
+    <td id ="w10">{w10}</td>
+    <td id ="w11">{w11}</td>
+    <td id ="w12">{w12}</td>
+    <td id ="w13">{w13}</td>
+    <td id ="w14">{w14}</td>
+    <td id ="w15">{w15}</td>
+    <td id ="w16">{w16}</td>
+    <td id ="w17">{w17}</td>
+    <td id ="w18">{w18}</td>
+    <td id ="w19">{w19}</td>
+    <td id ="w20">{w20}</td>
+    <td id ="w21">{w21}</td>
+    <td id ="w22">{w22}</td>
+    <td id ="w23">{w23}</td>
+    <td id ="w24">{w24}</td>
+    <td id ="w25">{w25}</td>
+    <td id ="w26">{w26}</td>
+    <td id ="w27">{w27}</td>
+    <td id ="w28">{w28}</td>
+    <td id ="w29">{w29}</td>
+    <td id ="w30">{w30}</td>
+    <td id ="w31">{w31}</td>
+    <td id ="w32">{w32}</td>
+    <td id ="w33">{w33}</td>
+    <td id ="w34">{w34}</td>
+    <td id ="w35">{w35}</td>
+    <td id ="w36">{w36}</td>
+    <td id ="w37">{w37}</td>
+    <td id ="w38">{w38}</td>
+    <td id ="w39">{w39}</td>
+    <td id ="w40">{w40}</td>
+    <td id ="w41">{w41}</td>
+    <td id ="w42">{w42}</td>
+    <td id ="w43">{w43}</td>
+    <td id ="w44">{w44}</td>
+    <td id ="w45">{w45}</td>
+    <td id ="w46">{w46}</td>
+    <td id ="w47">{w47}</td>
+    <td id ="w48">{w48}</td>
+    <td id ="w49">{w49}</td>
+    <td id ="w50">{w50}</td>
+    <td id ="w51">{w51}</td>
+    <td id ="w52">{w52}</td>
+  </tr>
+
+</table>
+      
+      
+<div class="line3"></div>
+
+
+      <div class="weekly_data_title">
+        <h1>ENGAGEMENT BREAKDOWN BY ACTIVITIES</h1>
+      </div> 
+      
+      
+     
+      
+      <div class="weekly_data_subtitle">
+        <h1>👍 Physical Activities</h1>
+      </div> 
+      
+            <table id="steps">
+  <tr>
+    <th>Week</th>
+    <th>1</th>
+    <th>2</th>
+    <th>3</th>
+    <th>4</th>
+    <th>5</th>
+    <th>6</th>
+    <th>7</th>
+    <th>8</th>
+    <th>9</th>
+    <th>10</th>
+    <th>11</th>
+    <th>12</th>
+    <th>13</th>
+    <th>14</th>
+    <th>15</th>
+    <th>16</th>
+    <th>17</th>
+    <th>18</th>
+    <th>19</th>
+    <th>20</th>
+    <th>21</th>
+    <th>22</th>
+    <th>23</th>
+    <th>24</th>
+    <th>25</th>
+    <th>26</th>
+    <th>27</th>
+    <th>28</th>
+    <th>29</th>
+    <th>30</th>
+    <th>31</th>
+    <th>32</th>
+    <th>33</th>
+    <th>34</th>
+    <th>35</th>
+    <th>36</th>
+    <th>37</th>
+    <th>38</th>
+    <th>39</th>
+    <th>40</th>
+    <th>41</th>
+    <th>42</th>
+    <th>43</th>
+    <th>44</th>
+    <th>45</th>
+    <th>46</th>
+    <th>47</th>
+    <th>48</th>
+    <th>49</th>
+    <th>50</th>
+    <th>51</th>
+    <th>52</th>
+  </tr>
+  <tr>
+    <th>High/Low</th>
+    <th></th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <th></th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <th></th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <th></th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <th></th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <th></th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <th></th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <th></th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <th></th>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>{s1}</td>
+    <td>{s2}</td>
+    <td>{s3}</td>
+    <td>{s4}</td>
+    <td>{s5}</td>
+    <td>{s6}</td>
+    <td>{s7}</td>
+    <td>{s8}</td>
+    <td>{s9}</td>
+    <td>{s10}</td>
+    <td>{s11}</td>
+    <td>{s12}</td>
+    <td>{s13}</td>
+    <td>{s14}</td>
+    <td>{s15}</td>
+    <td>{s16}</td>
+    <td>{s17}</td>
+    <td>{s18}</td>
+    <td>{s19}</td>
+    <td>{s20}</td>
+    <td>{s21}</td>
+    <td>{s22}</td>
+    <td>{s23}</td>
+    <td>{s24}</td>
+    <td>{s25}</td>
+    <td>{s26}</td>
+    <td>{s27}</td>
+    <td>{s28}</td>
+    <td>{s29}</td>
+    <td>{s30}</td>
+    <td>{s31}</td>
+    <td>{s32}</td>
+    <td>{s33}</td>
+    <td>{s34}</td>
+    <td>{s35}</td>
+    <td>{s36}</td>
+    <td>{s37}</td>
+    <td>{s38}</td>
+    <td>{s39}</td>
+    <td>{s40}</td>
+    <td>{s41}</td>
+    <td>{s42}</td>
+    <td>{s43}</td>
+    <td>{s44}</td>
+    <td>{s45}</td>
+    <td>{s46}</td>
+    <td>{s47}</td>
+    <td>{s48}</td>
+    <td>{s49}</td>
+    <td>{s50}</td>
+    <td>{s51}</td>
+    <td>{s52}</td>
+  </tr>
+
+</table>
+      
+      <div class="weekly_data_subtitle">
+        <h1>👎 Digital Learning</h1>
+      </div> 
+      
+  <table id="learn">
+  <tr>
+    <th>Week</th>
+    <th>1</th>
+    <th>2</th>
+    <th>3</th>
+    <th>4</th>
+    <th>5</th>
+    <th>6</th>
+    <th>7</th>
+    <th>8</th>
+    <th>9</th>
+    <th>10</th>
+    <th>11</th>
+    <th>12</th>
+    <th>13</th>
+    <th>14</th>
+    <th>15</th>
+    <th>16</th>
+    <th>17</th>
+    <th>18</th>
+    <th>19</th>
+    <th>20</th>
+    <th>21</th>
+    <th>22</th>
+    <th>23</th>
+    <th>24</th>
+    <th>25</th>
+    <th>26</th>
+    <th>27</th>
+    <th>28</th>
+    <th>29</th>
+    <th>30</th>
+    <th>31</th>
+    <th>32</th>
+    <th>33</th>
+    <th>34</th>
+    <th>35</th>
+    <th>36</th>
+    <th>37</th>
+    <th>38</th>
+    <th>39</th>
+    <th>40</th>
+    <th>41</th>
+    <th>42</th>
+    <th>43</th>
+    <th>44</th>
+    <th>45</th>
+    <th>46</th>
+    <th>47</th>
+    <th>48</th>
+    <th>49</th>
+    <th>50</th>
+    <th>51</th>
+    <th>52</th>
+  </tr>
+  <tr>
+    <th>High/Low</th>
+    <th></th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <th></th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <th></th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <th></th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <th></th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <th></th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <th></th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <th></th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <th></th>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>{l1}</td>
+    <td>{l2}</td>
+    <td>{l3}</td>
+    <td>{l4}</td>
+    <td>{l5}</td>
+    <td>{l6}</td>
+    <td>{l7}</td>
+    <td>{l8}</td>
+    <td>{l9}</td>
+    <td>{l10}</td>
+    <td>{l11}</td>
+    <td>{l12}</td>
+    <td>{l13}</td>
+    <td>{l14}</td>
+    <td>{l15}</td>
+    <td>{l16}</td>
+    <td>{l17}</td>
+    <td>{l18}</td>
+    <td>{l19}</td>
+    <td>{l20}</td>
+    <td>{l21}</td>
+    <td>{l22}</td>
+    <td>{l23}</td>
+    <td>{l24}</td>
+    <td>{l25}</td>
+    <td>{l26}</td>
+    <td>{l27}</td>
+    <td>{l28}</td>
+    <td>{l29}</td>
+    <td>{l30}</td>
+    <td>{l31}</td>
+    <td>{l32}</td>
+    <td>{l33}</td>
+    <td>{l34}</td>
+    <td>{l35}</td>
+    <td>{l36}</td>
+    <td>{l37}</td>
+    <td>{l38}</td>
+    <td>{l39}</td>
+    <td>{l40}</td>
+    <td>{l41}</td>
+    <td>{l42}</td>
+    <td>{l43}</td>
+    <td>{l44}</td>
+    <td>{l45}</td>
+    <td>{l46}</td>
+    <td>{l47}</td>
+    <td>{l48}</td>
+    <td>{l49}</td>
+    <td>{l50}</td>
+    <td>{l51}</td>
+    <td>{l52}</td>
+  </tr>
+  </table>
+      
+      
+      <div class="weekly_data_subtitle">
+        <h1>👎 Weigh-ins</h1>
+      </div> 
+      
+  <table id="weigh">
+  <tr>
+    <th>Week</th>
+    <th>1</th>
+    <th>2</th>
+    <th>3</th>
+    <th>4</th>
+    <th>5</th>
+    <th>6</th>
+    <th>7</th>
+    <th>8</th>
+    <th>9</th>
+    <th>10</th>
+    <th>11</th>
+    <th>12</th>
+    <th>13</th>
+    <th>14</th>
+    <th>15</th>
+    <th>16</th>
+    <th>17</th>
+    <th>18</th>
+    <th>19</th>
+    <th>20</th>
+    <th>21</th>
+    <th>22</th>
+    <th>23</th>
+    <th>24</th>
+    <th>25</th>
+    <th>26</th>
+    <th>27</th>
+    <th>28</th>
+    <th>29</th>
+    <th>30</th>
+    <th>31</th>
+    <th>32</th>
+    <th>33</th>
+    <th>34</th>
+    <th>35</th>
+    <th>36</th>
+    <th>37</th>
+    <th>38</th>
+    <th>39</th>
+    <th>40</th>
+    <th>41</th>
+    <th>42</th>
+    <th>43</th>
+    <th>44</th>
+    <th>45</th>
+    <th>46</th>
+    <th>47</th>
+    <th>48</th>
+    <th>49</th>
+    <th>50</th>
+    <th>51</th>
+    <th>52</th>
+  </tr>
+  <tr>
+    <th>High/Low</th>
+    <th></th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <th></th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <th></th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <th></th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <th></th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <th></th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <th></th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <th></th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <th></th>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>{i1}</td>
+    <td>{i2}</td>
+    <td>{i3}</td>
+    <td>{i4}</td>
+    <td>{i5}</td>
+    <td>{i6}</td>
+    <td>{i7}</td>
+    <td>{i8}</td>
+    <td>{i9}</td>
+    <td>{i10}</td>
+    <td>{i11}</td>
+    <td>{i12}</td>
+    <td>{i13}</td>
+    <td>{i14}</td>
+    <td>{i15}</td>
+    <td>{i16}</td>
+    <td>{i17}</td>
+    <td>{i18}</td>
+    <td>{i19}</td>
+    <td>{i20}</td>
+    <td>{i21}</td>
+    <td>{i22}</td>
+    <td>{i23}</td>
+    <td>{i24}</td>
+    <td>{i25}</td>
+    <td>{i26}</td>
+    <td>{i27}</td>
+    <td>{i28}</td>
+    <td>{i29}</td>
+    <td>{i30}</td>
+    <td>{i31}</td>
+    <td>{i32}</td>
+    <td>{i33}</td>
+    <td>{i34}</td>
+    <td>{i35}</td>
+    <td>{i36}</td>
+    <td>{i37}</td>
+    <td>{i38}</td>
+    <td>{i39}</td>
+    <td>{i40}</td>
+    <td>{i41}</td>
+    <td>{i42}</td>
+    <td>{i43}</td>
+    <td>{i44}</td>
+    <td>{i45}</td>
+    <td>{i46}</td>
+    <td>{i47}</td>
+    <td>{i48}</td>
+    <td>{i49}</td>
+    <td>{i50}</td>
+    <td>{i51}</td>
+    <td>{i52}</td>
+  </tr>
+  </table>
+      
+       <div class="weekly_data_subtitle">
+        <h1>👍 Social Communication</h1>
+      </div> 
+      
+      <table id="meals">
+  <tr>
+    <th>Week</th>
+    <th>1</th>
+    <th>2</th>
+    <th>3</th>
+    <th>4</th>
+    <th>5</th>
+    <th>6</th>
+    <th>7</th>
+    <th>8</th>
+    <th>9</th>
+    <th>10</th>
+    <th>11</th>
+    <th>12</th>
+    <th>13</th>
+    <th>14</th>
+    <th>15</th>
+    <th>16</th>
+    <th>17</th>
+    <th>18</th>
+    <th>19</th>
+    <th>20</th>
+    <th>21</th>
+    <th>22</th>
+    <th>23</th>
+    <th>24</th>
+    <th>25</th>
+    <th>26</th>
+    <th>27</th>
+    <th>28</th>
+    <th>29</th>
+    <th>30</th>
+    <th>31</th>
+    <th>32</th>
+    <th>33</th>
+    <th>34</th>
+    <th>35</th>
+    <th>36</th>
+    <th>37</th>
+    <th>38</th>
+    <th>39</th>
+    <th>40</th>
+    <th>41</th>
+    <th>42</th>
+    <th>43</th>
+    <th>44</th>
+    <th>45</th>
+    <th>46</th>
+    <th>47</th>
+    <th>48</th>
+    <th>49</th>
+    <th>50</th>
+    <th>51</th>
+    <th>52</th>
+  </tr>
+  <tr>
+    <th>High/Low</th>
+    <th></th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <th></th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <th></th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <th></th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <th></th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <th></th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <th></th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <th></th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <th></th>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>{m1}</td>
+    <td>{m2}</td>
+    <td>{m3}</td>
+    <td>{m4}</td>
+    <td>{m5}</td>
+    <td>{m6}</td>
+    <td>{m7}</td>
+    <td>{m8}</td>
+    <td>{m9}</td>
+    <td>{m10}</td>
+    <td>{m11}</td>
+    <td>{m12}</td>
+    <td>{m13}</td>
+    <td>{m14}</td>
+    <td>{m15}</td>
+    <td>{m16}</td>
+    <td>{m17}</td>
+    <td>{m18}</td>
+    <td>{m19}</td>
+    <td>{m20}</td>
+    <td>{m21}</td>
+    <td>{m22}</td>
+    <td>{m23}</td>
+    <td>{m24}</td>
+    <td>{m25}</td>
+    <td>{m26}</td>
+    <td>{m27}</td>
+    <td>{m28}</td>
+    <td>{m29}</td>
+    <td>{m30}</td>
+    <td>{m31}</td>
+    <td>{m32}</td>
+    <td>{m33}</td>
+    <td>{m34}</td>
+    <td>{m35}</td>
+    <td>{m36}</td>
+    <td>{m37}</td>
+    <td>{m38}</td>
+    <td>{m39}</td>
+    <td>{m40}</td>
+    <td>{m41}</td>
+    <td>{m42}</td>
+    <td>{m43}</td>
+    <td>{m44}</td>
+    <td>{m45}</td>
+    <td>{m46}</td>
+    <td>{m47}</td>
+    <td>{m48}</td>
+    <td>{m49}</td>
+    <td>{m50}</td>
+    <td>{m51}</td>
+    <td>{m52}</td>
+  </tr>
+
+</table>
+
+<!--       <div class="weekly_data_subtitle">
+        <h1>👍 Exercise</h1>
+      </div> 
+      
+  <table id="exerc">
+  <tr>
+    <th>Week</th>
+    <th>1</th>
+    <th>2</th>
+    <th>3</th>
+    <th>4</th>
+    <th>5</th>
+    <th>6</th>
+    <th>7</th>
+    <th>8</th>
+    <th>9</th>
+    <th>10</th>
+    <th>11</th>
+    <th>12</th>
+    <th>13</th>
+    <th>14</th>
+    <th>15</th>
+    <th>16</th>
+    <th>17</th>
+    <th>18</th>
+    <th>19</th>
+    <th>20</th>
+    <th>21</th>
+    <th>22</th>
+    <th>23</th>
+    <th>24</th>
+    <th>25</th>
+    <th>26</th>
+    <th>27</th>
+    <th>28</th>
+    <th>29</th>
+    <th>30</th>
+    <th>31</th>
+    <th>32</th>
+    <th>33</th>
+    <th>34</th>
+    <th>35</th>
+    <th>36</th>
+    <th>37</th>
+    <th>38</th>
+    <th>39</th>
+    <th>40</th>
+    <th>41</th>
+    <th>42</th>
+    <th>43</th>
+    <th>44</th>
+    <th>45</th>
+    <th>46</th>
+    <th>47</th>
+    <th>48</th>
+    <th>49</th>
+    <th>50</th>
+    <th>51</th>
+    <th>52</th>
+  </tr>
+  <tr>
+    <th>High/Low</th>
+    <th></th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <th></th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <th></th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <th></th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <th></th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <th></th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <th></th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <th></th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <th></th>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>L</td>
+    <td>L</td>
+    <td>L</td>
+    <td>L</td>
+    <td>L</td>
+    <td>L</td>
+    <td>L</td>
+    <td>H</td>
+    <td>H</td>
+    <td>L</td>
+    <td>L</td>
+    <td>H</td>
+    <td>L</td>
+    <td>H</td>
+    <td>{e15}</td>
+    <td>{e16}</td>
+    <td>{e17}</td>
+    <td>{e18}</td>
+    <td>{e19}</td>
+    <td>{e20}</td>
+    <td>{e21}</td>
+    <td>{e22}</td>
+    <td>{e23}</td>
+    <td>{e24}</td>
+    <td>{e25}</td>
+    <td>{e26}</td>
+    <td>{e27}</td>
+    <td>{e28}</td>
+    <td>{e29}</td>
+    <td>{e30}</td>
+    <td>{e31}</td>
+    <td>{e32}</td>
+    <td>{e33}</td>
+    <td>{e34}</td>
+    <td>{e35}</td>
+    <td>{e36}</td>
+    <td>{e37}</td>
+    <td>{e38}</td>
+    <td>{e39}</td>
+    <td>{e40}</td>
+    <td>{e41}</td>
+    <td>{e42}</td>
+    <td>{e43}</td>
+    <td>{e44}</td>
+    <td>{e45}</td>
+    <td>{e46}</td>
+    <td>{e47}</td>
+    <td>{e48}</td>
+    <td>{e49}</td>
+    <td>{e50}</td>
+    <td>{e51}</td>
+    <td>{e52}</td>
+  </tr>
+  </table> -->
+      
+<!--       <div class="weekly_data_subtitle">
+        <h1>👍 Coach Messaging</h1>
+      </div>
+      
+  <table id="messg">
+  <tr>
+    <th>Week</th>
+    <th>1</th>
+    <th>2</th>
+    <th>3</th>
+    <th>4</th>
+    <th>5</th>
+    <th>6</th>
+    <th>7</th>
+    <th>8</th>
+    <th>9</th>
+    <th>10</th>
+    <th>11</th>
+    <th>12</th>
+    <th>13</th>
+    <th>14</th>
+    <th>15</th>
+    <th>16</th>
+    <th>17</th>
+    <th>18</th>
+    <th>19</th>
+    <th>20</th>
+    <th>21</th>
+    <th>22</th>
+    <th>23</th>
+    <th>24</th>
+    <th>25</th>
+    <th>26</th>
+    <th>27</th>
+    <th>28</th>
+    <th>29</th>
+    <th>30</th>
+    <th>31</th>
+    <th>32</th>
+    <th>33</th>
+    <th>34</th>
+    <th>35</th>
+    <th>36</th>
+    <th>37</th>
+    <th>38</th>
+    <th>39</th>
+    <th>40</th>
+    <th>41</th>
+    <th>42</th>
+    <th>43</th>
+    <th>44</th>
+    <th>45</th>
+    <th>46</th>
+    <th>47</th>
+    <th>48</th>
+    <th>49</th>
+    <th>50</th>
+    <th>51</th>
+    <th>52</th>
+  </tr>
+  <tr>
+    <th>High/Low</th>
+    <th></th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <th></th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <th></th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <th></th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <th></th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <th></th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <th></th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <th></th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <th></th>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>H</td>
+    <td>H</td>
+    <td>H</td>
+    <td>H</td>
+    <td>H</td>
+    <td>H</td>
+    <td>H</td>
+    <td>H</td>
+    <td>H</td>
+    <td>H</td>
+    <td>H</td>
+    <td>H</td>
+    <td>H</td>
+    <td>H</td>
+    <td>{j15}</td>
+    <td>{j16}</td>
+    <td>{j17}</td>
+    <td>{j18}</td>
+    <td>{j19}</td>
+    <td>{j20}</td>
+    <td>{j21}</td>
+    <td>{j22}</td>
+    <td>{j23}</td>
+    <td>{j24}</td>
+    <td>{j25}</td>
+    <td>{j26}</td>
+    <td>{j27}</td>
+    <td>{j28}</td>
+    <td>{j29}</td>
+    <td>{j30}</td>
+    <td>{j31}</td>
+    <td>{j32}</td>
+    <td>{j33}</td>
+    <td>{j34}</td>
+    <td>{j35}</td>
+    <td>{j36}</td>
+    <td>{j37}</td>
+    <td>{j38}</td>
+    <td>{j39}</td>
+    <td>{j40}</td>
+    <td>{j41}</td>
+    <td>{j42}</td>
+    <td>{j43}</td>
+    <td>{j44}</td>
+    <td>{j45}</td>
+    <td>{j46}</td>
+    <td>{j47}</td>
+    <td>{j48}</td>
+    <td>{j49}</td>
+    <td>{j50}</td>
+    <td>{j51}</td>
+    <td>{j52}</td>
+  </tr>
+  </table> -->
+
+      
+<!--       <div class="weekly_data_subtitle">
+        <h1>👎 Social Communication</h1>
+      </div> 
+      
+      
+  <table id="chat">
+  <tr>
+    <th>Week</th>
+    <th>1</th>
+    <th>2</th>
+    <th>3</th>
+    <th>4</th>
+    <th>5</th>
+    <th>6</th>
+    <th>7</th>
+    <th>8</th>
+    <th>9</th>
+    <th>10</th>
+    <th>11</th>
+    <th>12</th>
+    <th>13</th>
+    <th>14</th>
+    <th>15</th>
+    <th>16</th>
+    <th>17</th>
+    <th>18</th>
+    <th>19</th>
+    <th>20</th>
+    <th>21</th>
+    <th>22</th>
+    <th>23</th>
+    <th>24</th>
+    <th>25</th>
+    <th>26</th>
+    <th>27</th>
+    <th>28</th>
+    <th>29</th>
+    <th>30</th>
+    <th>31</th>
+    <th>32</th>
+    <th>33</th>
+    <th>34</th>
+    <th>35</th>
+    <th>36</th>
+    <th>37</th>
+    <th>38</th>
+    <th>39</th>
+    <th>40</th>
+    <th>41</th>
+    <th>42</th>
+    <th>43</th>
+    <th>44</th>
+    <th>45</th>
+    <th>46</th>
+    <th>47</th>
+    <th>48</th>
+    <th>49</th>
+    <th>50</th>
+    <th>51</th>
+    <th>52</th>
+  </tr>
+  <tr>
+    <th>High/Low</th>
+    <th></th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <th></th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <th></th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <th></th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <th></th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <th></th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <th></th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <th></th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <th></th>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>H</td>
+    <td>L</td>
+    <td>H</td>
+    <td>H</td>
+    <td>H</td>
+    <td>L</td>
+    <td>L</td>
+    <td>H</td>
+    <td>H</td>
+    <td>L</td>
+    <td>L</td>
+    <td>L</td>
+    <td>L</td>
+    <td>L</td>
+    <td>{g15}</td>
+    <td>{g16}</td>
+    <td>{g17}</td>
+    <td>{g18}</td>
+    <td>{g19}</td>
+    <td>{g20}</td>
+    <td>{g21}</td>
+    <td>{g22}</td>
+    <td>{g23}</td>
+    <td>{g24}</td>
+    <td>{g25}</td>
+    <td>{g26}</td>
+    <td>{g27}</td>
+    <td>{g28}</td>
+    <td>{g29}</td>
+    <td>{g30}</td>
+    <td>{g31}</td>
+    <td>{g32}</td>
+    <td>{g33}</td>
+    <td>{g34}</td>
+    <td>{g35}</td>
+    <td>{g36}</td>
+    <td>{g37}</td>
+    <td>{g38}</td>
+    <td>{g39}</td>
+    <td>{g40}</td>
+    <td>{g41}</td>
+    <td>{g42}</td>
+    <td>{g43}</td>
+    <td>{g44}</td>
+    <td>{g45}</td>
+    <td>{g46}</td>
+    <td>{g47}</td>
+    <td>{g48}</td>
+    <td>{g49}</td>
+    <td>{g50}</td>
+    <td>{g51}</td>
+    <td>{g52}</td>
+  </tr>
+  </table> -->
+       
+      
+  
+      <!--    sms box    -->
+      <section>
+<!--         
+        <div class="sms_title">
+        <h1>Send Patient an SMS 💬</h1>
+        </div>
+        
+        <div class="typeArea">
+            <input type="text" id="toSend" name="toSend" placeholder="Type a message..."> 
+            
+        </div>
+        
+        <input type="submit" id="submitBtn" value="Send"
+                onclick="submitItem()">  -->
+        
+        <!--    list to record messages that were sent    -->
+<!--         <div class="sms_title">
+            <h1>Sent SMS:</h1>
+            <div id="sms-list">
+            </div>
+        </div> -->
+        
+        
+        </section>
+      
+    </main>
+  </div>
+  
+<!--   <button onclick="myFunction()">Try it</button>
+  <button onclick="myFunction1()">Try it now</button> -->
+
+</body>
+
+</html>

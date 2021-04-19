@@ -1,0 +1,955 @@
+
+
+html, body{
+  margin:px;
+  padding:px;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  font-size: 59%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  padding: 0rem;
+  font-family: Arial;
+  
+}
+
+#app {
+  margin: auto;
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  border: 2px solid #e2e1dd; /*black frame*/
+  margin-bottom: rem;
+  border-radius: 0.5em;
+}
+
+.nav {
+  display: block;
+  height: rem;
+  background-color: #623292;  /*purple box for Doctore name on top*/
+  position: relative;
+  padding-top: 20px; /*thickness of top frame*/
+  border-radius: 4px 4px 0px 0px;
+}
+
+.doctor_name {
+  padding: 1rem;
+  /* verticle-align: center; */
+  color: white; /*Doctor name color*/
+}
+
+.header_title {
+  padding: 5rem;
+  color: white ; /*Doctor name color*/
+  text-align: center;
+  position: absolute;
+  top: 18%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+}
+.line1{
+width: 980px;
+height: 120px;
+border-bottom: 1px solid #E9E0ED; /* purple line*/
+position: absolute;
+}
+
+
+/*     .nav__links {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.link,
+.link:active,
+.link:visited,
+.link:link {
+  color: black;
+  font-size: 1.6 rem;
+} */
+
+.header {
+  display: block; /*Title dDPP provider dashboard */
+  height: 7vh;
+  padding: 1rem;
+/*       border: 2px solid black; */
+}
+
+
+.patient_name{
+font-size: 14px;  
+color: #57068c;
+padding-top: 2px;
+
+}
+
+/*  A NOTE ON VERTICAL ALIGNMENT WITHOUT FLEXBOX OR GRID: Notice, that if you have a position:absolute on a child element, the parent container  must have a position:relative  */
+.header__info {   /*This is the big header dDPP Provider Dashboard */
+  display: block;
+  width: 50%;
+  height: 100%;
+  background-color: white; /*yellow*/
+  margin: 0 auto;
+  position: relative;
+}
+
+.header__title {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.info {
+font-size: 12px; /* demographic info*/
+}
+.main {
+  margin-top: 2rem;
+  display: block;
+  height: 100%;
+  padding: 0rem 1rem 1rem 1rem;
+}
+
+.main_title {
+  text-align: center; /*this is the smaller Patient dDPP Data title*/
+}
+
+.main__articles {  /*not applied right now*/
+  display: block;
+  width: 600px;
+  height: 700px;
+  border: 1 px solid black;
+  margin: 0 auto;
+}
+
+/* .general {  /*the general info on top*/
+/*       display: inline-block; } */
+
+
+.clearfix::after { /*not applied right now*/
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+.article {
+  display: inline-block;
+/*       float: left; */
+  /* NOTE: we introduce a float:left and as a result, we need to add a clearfix to the parent container */
+  width: 90px;  /*this is data row*/
+  padding: 0.5rem;
+}
+
+.article__content {
+  width: 100%;
+  height: 100%;
+  background-color: #fffecd;
+  border: 0px solid black; 
+  padding: 0.7rem; 
+}
+
+.article__image {
+  width: 100%;
+  height: 100px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.article__image--map {
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Vancouver_by_Sentinel-2.jpg/1024px-Vancouver_by_Sentinel-2.jpg)
+}
+
+.article__image--city {
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Concord_Pacific_Master_Plan_Area.jpg/1920px-Concord_Pacific_Master_Plan_Area.jpg)
+}
+
+.article__image--bridge {
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Lions_Gate_Bridge_at_night.jpg/2560px-Lions_Gate_Bridge_at_night.jpg)
+}
+
+.article__image--mountains {
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/8/8e/UBC_aerial_view-cropped.jpg)
+}
+
+
+
+.general_title {
+font-size: 10px;
+}
+
+
+.overview {
+  display: inline-block;
+/*       float: left; */
+  /* NOTE: we introduce a float:left and as a result, we need to add a clearfix to the parent container */
+  width: 120px;
+  padding: 0.5rem;
+}
+
+
+#showArea {
+    background: white;
+    max-width: 600px;
+    padding: 20px;
+    margin: 0 auto;
+    border: px solid #000;
+
+}
+
+/*patient info table*/
+
+#patient_info {
+font-family: Helvetica;
+border-collapse: collapse;
+width: 44%;
+font-size: 11px;
+font-style: italic;
+/*   border: 2px solid #ddd; */
+margin-top: 10px;
+margin-bottom: 30px;
+}
+
+
+/*ddpp admin info table*/
+
+#ddpp_admin_info {
+font-family: Arial, Helvetica, sans-serif;
+border-collapse: collapse;
+width: 70%;
+/*   border: 2px solid #ddd; */
+margin-top: 5px;
+margin-bottom: 50px;
+text-align: left;
+}
+#ddpp_admin_info th {
+font-size: 12px #939a90;
+/*   padding-top: 12px; */
+padding-bottom: 12px;
+text-align: left;
+/*   background-color: #f4f4f4; */
+color: #939a90;
+}
+#ddpp_admin_info td{
+font-size: 12px;
+/*   padding-top: 2px; */
+padding-bottom: 1px;
+text-align: left;
+/*   background-color: #f4f4f4; */
+color: black;
+}
+
+
+
+
+
+/*  high-level ddpp info */
+
+#customers {
+font-family: Arial, Helvetica, sans-serif;
+border-collapse: collapse;
+width: 35%;
+border: 0px solid #f4f4f4;
+margin-top: 50px;
+margin-bottom: 50px;
+}
+
+#customers th {
+padding-top: 12px;
+padding-bottom: 12px;
+text-align: left;
+/*   background-color: #f4f4f4; */
+color: black;
+}
+
+#customers td, #customers th {
+border: 0px solid #f4f4f4;
+padding: 0px;
+}
+
+
+#customers th, .general_title {
+font-size: 7px;
+}
+
+#customers td {
+font-size: 12px;
+}
+
+
+/*  caption table */
+#caption {
+font-family: Arial, Helvetica, sans-serif;
+border-collapse: collapse;
+width:35%;
+border: 0px solid #ddd;
+margin-top: 50px;
+margin-bottom: 0px;
+font-size: 12px;
+color: #4a4f44;
+}
+
+/* #caption th {
+width: 16rem;
+height: 2rem;
+text-align: top;
+font-size: 12px #939a90;
+} */
+/* #caption td {
+width: 16rem;
+height: 2rem;
+text-align: top;
+font-size: 12px #939a90;
+} */
+
+
+
+
+
+/*  overall engagement score info */
+
+#engagement_overview {
+font-family: Helvetica;
+width: 100%;
+margin-top: 18px;
+margin-bottom: 18px;
+border-radius: 0.5em;
+/*   border-collapse: collapse; */
+overflow: hidden;
+/* verticle-align: top; */
+background-color: #E9E0ED; /*  purple table */
+border: px solid #e2e1dd;
+}
+
+#engagement_overview th {
+padding-top: 16px;
+padding-bottom: 12px;
+text-align: center;
+padding-left: 0px;
+/*   padding: 20px; */
+color: #57068c;
+font-size: 16px;
+/*   border-color: 2px #f4f4f4; */
+}
+
+#engagement_overview td {
+padding-top: 0px;
+padding-bottom: px;
+padding-left: 0px; 
+vertical-align: top;
+text-align: center;
+height: 60px;
+width: 120px;
+font-size: 14px;
+color: #4a4f44; /* NYU dark grayfont */
+font-weight: bold;
+line-height: 2;
+font-size: 12px;
+/*   border: 2px solid #f4f4f4; */
+}
+
+#engagement_overview tbody tr:nth-child(2) td:nth-child(2){
+color: #0EC27B; /* green text */
+font-size: 20px;
+font-weight: bold;
+}
+#engagement_overview tbody tr:nth-child(2) td:nth-child(1){
+color: #4a4f44; /* green text */
+font-size: 20px;
+font-weight: bold;
+}
+
+
+
+
+
+
+/*  engagement data table */
+
+#engagement_data {
+font-family: Arial, Helvetica, sans-serif;
+border-collapse: collapse;
+width: 100%;
+border: 2px solid;
+margin-top: 10px;
+margin-bottom: 40px;
+/* verticle-align: top; */
+border-radius: 0.5em;
+border-collapse: collapse;
+overflow: hidden;
+background: #E9E0ED;
+}
+
+#engagement_data td {
+width: 20rem;
+height: 2rem;
+/*   border: 2px solid #f4f4f4; */
+text-align: center;
+font-size: 12px;
+background: white;
+color: #4a4f44; /*NYU gray font*/
+}
+
+#engagement_data th {
+background: #E9E0ED;
+/*   border-color: #f4f4f4; */
+width: 20rem;
+height: 2rem;
+/*   border: 2px solid #f4f4f4; */
+text-align: center;
+font-size: 9px;
+padding:1rem;
+color: #57068c;
+}
+
+
+/* #engagement_data body {
+padding:1rem;
+} */
+
+
+/*  data caption*/
+
+
+.weekly_data_title{
+padding-top: px;
+padding-bottom: 10px;
+color: #57068c;
+}
+
+.weekly_data_subtitle{
+color: #4a4f44;
+font-size: 8px;
+}
+
+
+.line2{
+width: 980px;
+height: 30px;
+border-bottom: 1px solid #E9E0ED;
+position: absolute;
+}
+
+.line3{
+width: 980px;
+height: 30px;
+border-bottom: 1px solid #E9E0ED;
+position: absolute;
+}
+
+
+
+
+
+
+/* Popup container - can be anything you want */
+.popup {
+position: absolute;
+margin-top: -81px;
+margin-left: -0%;
+display: inline-block;
+width: 10%;
+cursor: pointer;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+font-size: 12px;
+color: #4a4f44;
+text-align: center;
+text-decoration: underline;
+}
+
+/* The actual popup */
+.popup .popuptext {
+visibility: hidden;
+width: 130px;
+height: 170px;
+background-color: #4a4f44;
+/*   opacity: 90%; */
+color: #fff;
+text-align: center;
+padding-top: 16px;
+padding-left: 12%;
+border-radius: 6px;
+/*   padding: 8px 0; */
+position: absolute;
+z-index: 1;
+bottom: 125%;
+left: 50%;
+margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+content: "";
+position: absolute;
+top: 100%;
+left: 50%;
+margin-left: -5px;
+border-width: 5px;
+border-style: solid;
+border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+visibility: visible;
+-webkit-animation: fadeIn 1s;
+animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+from {opacity: 0;} 
+to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+from {opacity: 0;}
+to {opacity:1 ;}
+}
+
+
+
+
+
+
+
+
+
+/*  overall weekly engagement data table */
+
+#overall_engagement {
+font-family: Arial, Helvetica, sans-serif;
+border-collapse: collapse;
+width: 100%;
+border: 0px solid #ddd;
+margin-top: 20px;
+margin-bottom: 40px;
+}
+
+#overall_engagement th {
+width: 14rem;
+height: 2rem;
+border: px solid #ccc;
+text-align: top;
+/*   font-size: 9px; */
+}
+
+#overall_engagement td {
+width: 14rem;
+height: 2rem;
+border: px solid #ccc;
+text-align: top;
+}
+
+#overall_engagement th {
+background: white;
+border-color: white;
+}
+
+#overall_engagement td {
+/*   font-size: 9px; */
+text-align: center;
+/*   display: none; */
+} 
+
+
+
+
+
+tbody>:nth-child(3){   /*  this targets the 3rd variable rows in all tables*/
+color:white; 
+font-size: 2px;
+}
+
+
+/*  overall weekly meals data table */
+
+#meals {
+font-family: Arial, Helvetica, sans-serif;
+border-collapse: collapse;
+width: 100%;
+border: 0px solid #ddd;
+margin-top: 25px;
+margin-bottom: 20px;
+}
+#meals th {
+width: 14rem;
+height: 2rem;
+border: px solid #ccc;
+text-align: top;
+/*   font-size: 10px; */
+}
+#meals td {
+width: 14rem;
+height: 2rem;
+border: px solid #ccc;
+text-align: top;
+}
+#meals th {
+background: white;
+border-color: white;
+}
+
+#meals td {
+/*   font-size: 10px; */
+text-align: center;
+/*   display: none; */
+}
+
+
+
+/*  overall weekly steps data table */
+
+#steps {
+font-family: Arial, Helvetica, sans-serif;
+border-collapse: collapse;
+width: 100%;
+border: 0px solid #ddd;
+margin-top: 25px;
+margin-bottom: 20px;
+}
+#steps th {
+width: 14rem;
+height: 2rem;
+border: px solid #ccc;
+text-align: top;
+/*   font-size: 10px; */
+}
+#steps td {
+width: 14rem;
+height: 2rem;
+border: px solid #ccc;
+text-align: top;
+}
+#steps th {
+background: white;
+border-color: white;
+}
+
+#steps td {
+/*   font-size: 10px; */
+text-align: center;
+/*   display: none; */
+}
+
+
+
+/*  overall weekly digital learning data table */
+
+#learn {
+font-family: Arial, Helvetica, sans-serif;
+border-collapse: collapse;
+width: 100%;
+border: 0px solid #ddd;
+margin-top: 25px;
+margin-bottom: 20px;
+}
+#learn th {
+width: 14rem;
+height: 2rem;
+border: px solid #ccc;
+text-align: top;
+/*   font-size: 10px; */
+}
+#learn td {
+width: 14rem;
+height: 2rem;
+border: px solid #ccc;
+text-align: top;
+}
+#learn th {
+background: white;
+border-color: white;
+}
+
+#learn td {
+/*   font-size: 10px; */
+text-align: center;
+/*   display: none; */
+}
+
+
+/*  overall weekly weigh-in data table */
+
+#weigh {
+font-family: Arial, Helvetica, sans-serif;
+border-collapse: collapse;
+width: 100%;
+border: 0px solid #ddd;
+margin-top: 25px;
+margin-bottom: 20px;
+}
+#weigh td {
+width: 14rem;
+height: 2rem;
+border: px solid #ccc;
+text-align: top;
+}
+#weigh th {
+width: 14rem;
+height: 2rem;
+border: px solid #ccc;
+text-align: top;
+/*   font-size: 10px; */
+}
+#weigh th {
+background: white;
+border-color: white;
+}
+
+#weigh td {
+/*   font-size: 10px; */
+text-align: center;
+/*   display: none; */
+}
+
+
+/*  overall weekly exercise data table */
+
+#exerc {
+font-family: Arial, Helvetica, sans-serif;
+border-collapse: collapse;
+width: 100%;
+border: 0px solid #ddd;
+margin-top: 25px;
+margin-bottom: 20px;
+}
+#exerc th {
+width: 14rem;
+height: 2rem;
+border: px solid #ccc;
+text-align: top;
+/*   font-size: 10px; */
+}
+#exerc td {
+width: 14rem;
+height: 2rem;
+border: px solid #ccc;
+text-align: top;
+}
+#exerc th {
+background: white;
+border-color: white;
+}
+
+#exerc td {
+/*   font-size: 10px; */
+text-align: center;
+/*   display: none; */
+}
+
+
+/*  overall weekly coach messaging data table */
+
+#messg {
+font-family: Arial, Helvetica, sans-serif;
+border-collapse: collapse;
+width: 100%;
+border: 0px solid #ddd;
+margin-top: 25px;
+margin-bottom: 20px;
+}
+#messg th {
+width: 14rem;
+height: 2rem;
+border: px solid #ccc;
+text-align: top;
+/*   font-size: 10px; */
+}
+#messg td {
+width: 14rem;
+height: 2rem;
+border: px solid #ccc;
+text-align: top;
+}
+#messg th {
+background: white;
+border-color: white;
+}
+
+#messg td {
+/*   font-size: 10px; */
+text-align: center;
+/*   display: none; */
+}
+
+
+/*  overall weekly group chat table */
+
+#chat {
+font-family: Arial, Helvetica, sans-serif;
+border-collapse: collapse;
+width: 100%;
+border: 0px solid #ddd;
+margin-top: 25px;
+margin-bottom: 20px;
+}
+#chat th {
+width: 14rem;
+height: 2rem;
+border: px solid #ccc;
+text-align: top;
+/*   font-size: 10px; */
+}
+#chat td {
+width: 14rem;
+height: 2rem;
+border: px solid #ccc;
+text-align: top;
+}
+#chat th {
+background: white;
+border-color: white;
+}
+
+#chat td {
+/*   font-size: 10px; */
+text-align: center;
+/*   display: none; */
+}
+
+
+.box {
+background: #DAD6DE;
+width: 335px;
+height: 90px;
+border: 0px solid gray;
+border-radius: 4px;
+margin-left: 645px;
+margin-top: -40px;
+position: absolute;
+}
+
+
+#prompt {
+    /* color: white; */
+    font-size: 15px;
+}
+
+input {
+    margin:1px;
+    text-align: left;
+    padding: 5px;
+    font-size: 16px;
+    
+}
+
+input[type=submit] {
+    padding: 70px;
+}
+
+input:focus {
+    outline: none;
+}
+
+#showArea {
+    padding: 50px;
+}
+
+
+.sms_title {
+font-size: 10px;
+margin-top: -40px;
+position: absolute;
+margin-left: 660px;
+color: #57068c;
+
+}
+
+.typeArea {
+/*         background-color: #f4f4f4; */
+/*         border-color: 1px solid #000;  /*not doing anything right now*/ 
+    padding: 20px; /*thickness around textbox*/
+/*         margin: 10px; white space between data row and the textbox */
+    display: flex;
+  
+  
+  width: 235px;
+  height: 30px;
+  padding: 1px 1px;
+  box-sizing: border-box;
+  border: 0.5px solid white;
+  border-radius: 4px;
+  background-color: white; /*color of frame of textbox*/
+  resize: none;
+  margin-top: 7px;
+  margin-left: 660px;
+  position: absolute;
+}
+
+#sms-list {
+    min-height: 100px;
+  
+}
+
+#sms-list>p {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0 10px 0;
+    margin: 0;
+    font-size: 12px;
+
+}
+
+#toSend {
+    width: 100%;
+    font-size: 11px;
+    border: 0px solid #ccc
+    
+}
+
+#submitBtn {
+    background-color: #623292; /*not affecting*/
+    border: none;
+    color: white;
+    font-weight: bold;
+    padding: 9px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 11px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-left: 900px;
+  margin-top: 7px;
+    position: absolute;
+/*         margin-left: 140px; /*pushing button to middle*/ 
+}
+
+
+
+#algorithm_def {
+background-color: #f4f4f4; opacity: 90%;
+padding: 8px;
+/*   width: 10%; */
+display: none;
+}
+
+span:hover + #algorithm_def {
+display: block;
+width: 90%;
+border-radius: 4px;
+font-size: 10px;
+}
+
+
+
+
